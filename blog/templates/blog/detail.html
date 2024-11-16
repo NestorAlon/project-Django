@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blog App</title>
+  </head>
+  <body>
+    <p>
+      <strong>Title:</strong>
+      {{ article.title }}
+    </p>
+    <p>
+      <strong>Content:</strong>
+      {{ article.content }}
+    </p>
+    <p>
+      <strong>Check:</strong>
+      {{ article.check_box }}
+    </p>
+    <p>
+      <strong>Multiple Check:</strong>
+      {{ article.multiple_check_box }}
+    </p>
+    <p>
+      <strong>Pulldown:</strong>
+      {{ article.pulldown }}
+    </p>
+    <p>
+      <strong>Radio:</strong>
+      {{ article.radio }}
+    </p>
+    <a href="{% url 'edit' article.id %}">Edit</a>
+    <!-- Apéndice -->
+    <td><a href="{% url 'delete' article.id %}">Delete</a></td>
+    <a href="{% url 'index' %}">Back</a>
+    <!-- Enlace para regresar a la página de inicio -->
+  </body>
+</html>
